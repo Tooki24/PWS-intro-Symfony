@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: auto; padding: 5%;width: 100%; font: 18px/1.5 sans-serif; background-color: lightgrey;}
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .legrosbloc{display:flex; flex-direction:row;padding: 5%;justify-content: space-around}
+    .prochainevent{display:flex;flex-direction:column}
+</style>
+
+<div class="example-wrapper">
+    <h1>Back Office Admin</h1>
+    <p>Application d'administration des jeuxdicode.</p>
+</div>
+<div class="legrosbloc">
+    <div class="prochainevent">
+        <h2>Prochain évènement</h2>
+        un évènement
+        <button type="button" class="btn btn-success">Détail évènement</button>
+    </div>
+    <div class="evenementpass">
+        <h2>Les évènements passés :</h2>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Table heading</th>
+                <th scope="col">Table heading</th>
+                <th scope="col">Table heading</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td><button type="button" class="btn btn-success">Détail</button> </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td><button type="button" class="btn btn-success">Détail</button> </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td >Table cell</td>
+                <td>Table cell</td>
+                <td><button type="button" class="btn btn-success">Détail</button> </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="proposition">
+        <h2>Les propositions :</h2>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Table heading</th>
+                <th scope="col">Table heading</th>
+                <th scope="col">Table heading</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td><button type="button" class="btn btn-success">Détail</button> </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td><button type="button" class="btn btn-success">Détail</button> </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td >Table cell</td>
+                <td>Table cell</td>
+                <td><button type="button" class="btn btn-success">Détail</button> </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
