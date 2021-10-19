@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IndexController!{% endblock %}
+{% block title %}slt{% endblock %}
 
 {% block body %}
 <style>
@@ -17,7 +17,7 @@
 <div class="legrosbloc">
     <div class="prochainevent">
         <h2>Prochain évènement</h2>
-        un évènement
+        {{ leTableau["description"] }}
         <button type="button" class="btn btn-success">Détail évènement</button>
     </div>
     <div class="evenementpass">

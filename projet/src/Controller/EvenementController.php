@@ -70,4 +70,15 @@ class EvenementController extends AbstractController
         ]);
     }
 
+    #[Route('/listevt', name: 'liste des évènements')]
+    public function listevt(): Response
+    {
+        $repository=$this->getDoctrine()->getManager()->getRepository('App\Entity\Evenement');
+        $evenements=$repository->findAll();
+        return $this->render('evenement/lsitevt.html.twig',[
+            'controller_name'=>'listevt',
+            'evenements'=>$evenements,
+        ]);
+    }
+
 }

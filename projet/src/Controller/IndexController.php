@@ -11,8 +11,10 @@ class IndexController extends AbstractController
     #[Route('/', name: 'index')]
     public function index(): Response
     {
+        //créer un tableau avec identifiant, titre et date
+        $tableau=array("identifiant"=>"numéro1","description"=>"cest le numéro 1","date"=>"08/08");
         return $this->render('index/index.html.twig', [
-            'controller_name' => 'IndexController',
+            'leTableau' => $tableau,
         ]);
     }
 }
