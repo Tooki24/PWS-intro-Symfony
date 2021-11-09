@@ -16,7 +16,7 @@ class EvenementController extends AbstractController
         ]);
     }
 
-    #[Route('/detailevt/{id?}', name: 'detail evt')]
+    #[Route('/detailevt/{id?}', name: 'detailevt')]
     public function detailevt(?int $id): Response
     {
         return $this->render('evenement/detailevt.html.twig',[
@@ -75,7 +75,7 @@ class EvenementController extends AbstractController
     {
         $repository=$this->getDoctrine()->getManager()->getRepository('App\Entity\Evenement');
         $evenements=$repository->findAll();
-        return $this->render('evenement/lsitevt.html.twig',[
+        return $this->render('evenement/listevt.html.twig',[
             'controller_name'=>'listevt',
             'evenements'=>$evenements,
         ]);
