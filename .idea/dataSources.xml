@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="MySQL - iut@localhost" uuid="e9209071-233b-466e-94bc-16dfb4e08e34">
+    <data-source source="LOCAL" name="iut@localhost" uuid="e81500f7-49ab-4c0e-8375-f5a6fde613e7">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

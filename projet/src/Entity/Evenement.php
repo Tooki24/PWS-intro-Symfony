@@ -54,9 +54,15 @@ class Evenement
      */
     private $sessions;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Membre::class)
+     */
+    private $membres;
+
     public function __construct()
     {
         $this->sessions = new ArrayCollection();
+        $this->membres = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -162,6 +168,30 @@ class Evenement
                 $session->setEvenement(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Membre[]
+     */
+    public function getMembres(): Collection
+    {
+        return $this->membres;
+    }
+
+    public function addMembre(Membre $membre): self
+    {
+        if (!$this->membres->contains($membre)) {
+            $this->membres[] = $membre;
+        }
+
+        return $this;
+    }
+
+    public function removeMembre(Membre $membre): self
+    {
+        $this->membres->removeElement($membre);
 
         return $this;
     }

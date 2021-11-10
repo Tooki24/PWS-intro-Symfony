@@ -9,12 +9,14 @@
     </style>
 
     <div class="example-wrapper">
-        <h1>Hello {{ controller_name}}{{ id }}! ✅</h1>
+        <p>Titre :{{ EvenementChoisi.titre }}</p>
+        <p> Nombre max participants : {{ EvenementChoisi.nbpartmax }}</p>
+        <p>Adresse : {{ EvenementChoisi.adresse }}</p>
 
-        This friendly message is coming from:
-        <ul>
-            <li>Your controller at <code><a href="{{ '/var/www/html/projet/src/Controller/EvenementController.php'|file_link(0) }}">src/Controller/EvenementController.php</a></code></li>
-            <li>Your template at <code><a href="{{ '/var/www/html/projet/templates/evenement/detailevt.html.twig'|file_link(0) }}">templates/evenement/detailevt.html.twig</a></code></li>
-        </ul>
+        <p>Membres :
+        {%  for membre in EvenementChoisi.membres  %}
+            <li>{{ membre.nom }}</li>
+        {% endfor %}</p>
+
     </div>
 {% endblock %}

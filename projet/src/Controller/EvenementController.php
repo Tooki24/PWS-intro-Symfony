@@ -19,9 +19,13 @@ class EvenementController extends AbstractController
     #[Route('/detailevt/{id?}', name: 'detailevt')]
     public function detailevt(?int $id): Response
     {
+        //acces aux services Doctrine, puis entityManager, puis Repository de l'objet Evenement :
+        $repository=$this->getDoctrine()->getManager()->getRepository('App\Entity\Evenement');
+        //récupération de l'évenement passé en paramètre
+        $EvenementChoisi=$repository->find($id);
+
         return $this->render('evenement/detailevt.html.twig',[
-            'controller_name'=>'page détails evenement ',
-            'id'=>$id,
+            'EvenementChoisi'=>$EvenementChoisi,
         ]);
     }
 

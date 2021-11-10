@@ -73,4 +73,16 @@ class Session
 
         return $this;
     }
+
+    public function getIdEvenement(): ?Evenement
+    {
+        return $this->id_evenement;
+    }
+
+    public function setIdEvenement(?Evenement $id_evenement): self
+    {
+        $this->id_evenement = $id_evenement;
+
+        return $this;
+    }
 }
